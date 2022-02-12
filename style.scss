@@ -1,16 +1,13 @@
-@keyframes logoAnimate {
+@keyframes tailAnimate {
 	from {
-		top: 7.26rem;
-		left: 68%;
-		transform: rotate(0deg);
+		transform: translateY(7%) rotate(1deg);
 	}
 	to {
-		top: 7.11rem;
-		left: 69.6%;
-		transform: rotate(0deg);
+		transform: translateY(10%) rotate(-3deg);
 	}
 }
 
+// CSS reset --- START
 *,
 *::after,
 *::before {
@@ -27,6 +24,7 @@ html {
 body {
 	box-sizing: border-box;
 }
+// CSS reset --- END
 
 body {
 	background-color: #faf1de;
@@ -42,8 +40,6 @@ body {
 		inset 0 0 20px hsla(33, 31%, 57%, 0.5),
 		inset 0 0 30px hsla(29, 38%, 53%, 0.75);
 	font-family: 'Itim', cursive;
-	/* font-weight: 400; */
-	/*font-size: 16px;*/
 	line-height: 2.4rem;
 	color: #404041;
 	padding: 16px;
@@ -63,29 +59,19 @@ body {
 	color: #a33948;
 }
 
-.centerText {
-	text-align: center;
-}
-
-.mt-15 {
-	margin-top: 1.5rem;
-}
-
-.mb-15 {
-	margin-bottom: 1.5rem;
-}
-
 img {
 	max-width: 100%;
 	height: auto;
 }
 
-section {
-	margin: auto;
+.container {
+	max-width: 80rem;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-#etymology {
-	max-width: 80rem;
+section {
+	margin-bottom: 2rem;
 }
 
 nav {
@@ -113,6 +99,7 @@ nav {
 			cursor: pointer;
 			position: relative;
 			top: -1.6rem;
+			left: 1rem;
 
 			&:hover ~ .logo-frame .logo-hand {
 				transform: translateY(186%) rotate(28deg) !important;
@@ -157,8 +144,7 @@ nav {
 			z-index: 8;
 			height: auto;
 			top: -0.1rem;
-			max-width: 160rem;
-			width: 16rem;
+			width: 18rem;
 
 			.logo-frame-inside {
 				display: flex;
@@ -187,9 +173,12 @@ nav {
 					position: absolute;
 					left: 3%;
 					width: 41%;
-					transform-origin: bottom right;
+					transform-origin: bottom left;
 					transform: translateY(7%) rotate(0);
-					transition: transform 1s ease;
+					animation-name: tailAnimate;
+					animation-duration: 2s;
+					animation-iteration-count: infinite;
+					animation-direction: alternate;
 				}
 
 				.logo-tail.animate {
@@ -228,10 +217,6 @@ nav {
 	height: 5px;
 	background-color: red;
 }
-
-/* top: 9.7%;
-left: 68%;
-transform: rotate(-7deg); */
 
 .lineFrame {
 	position: relative;
@@ -301,49 +286,6 @@ transform: rotate(-7deg); */
 	}
 }
 
-.frameHeading {
-	position: relative;
-	bottom: 1.2rem;
-	font-size: 2.4rem;
-	margin: 0 1rem;
-	font-family: 'Carter One', cursive;
-	font-weight: 100;
-	white-space: nowrap;
-}
-
-.frameCalc {
-	margin: auto;
-	height: 92px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.inputCalc {
-	background-color: transparent;
-	height: 8.7rem;
-	font-size: 2.4rem;
-	font-family: 'Carter One', cursive;
-	width: 17rem;
-	position: absolute;
-	padding: 1rem;
-	text-align: center;
-	line-height: 3.1rem;
-	resize: none;
-	color: #a33948;
-	padding-left: 1.7rem;
-}
-
-.imgCalc {
-	width: 17rem;
-	display: block;
-}
-
-#humanAge {
-	font-size: 2.4rem;
-	font-family: 'Carter One', cursive;
-}
-
 @media only screen and (min-width: 800px) {
 	.nav-top-img {
 		display: block;
@@ -375,74 +317,102 @@ transform: rotate(-7deg); */
 		margin-bottom: 20px;
 		text-align: center;
 	}
-}
 
-.frame-superstition img {
-	position: absolute;
-	bottom: 0.1rem;
-	right: 0;
-	height: 12rem;
-}
+	&.frame-etymology {
+		.etymology-inside-duo {
+			display: flex;
+			margin-top: 1rem;
+		}
 
-.frame-superstition {
-	padding-bottom: 12rem;
-}
+		.etymology-inside-duo span {
+			display: flex;
+		}
 
-.test-image {
-	background-image: url(/img/back.jpg);
-	/* background-position: right; */
-	background-size: contain;
-	background-repeat: no-repeat;
-}
+		.etymology-inside-duo figure {
+			max-width: 25%;
+			flex: 1 0 100%;
+			display: flex;
+			align-items: center;
+			padding-right: 1.5rem;
+		}
 
-.etymology-inside-duo {
-	display: flex;
-	margin-top: 1rem;
-}
+		.etymology-inside-duo figure img {
+			width: 100%;
+		}
+	}
 
-.etymology-inside-duo span {
-	display: flex;
-}
+	&.frame-superstition {
+		padding-bottom: 12rem;
 
-.etymology-inside-duo figure {
-	max-width: 25%;
-	flex: 1 0 100%;
-	display: flex;
-	align-items: center;
-	padding-right: 1.5rem;
-}
+		img {
+			position: absolute;
+			bottom: 0.1rem;
+			right: 0;
+			height: 12rem;
+		}
+	}
 
-.etymology-inside-duo figure img {
-	width: 100%;
+	&.frame-calculator {
+		.frame-calc {
+			margin: auto;
+			height: 92px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.input-calc {
+			background-color: transparent;
+			height: 8.7rem;
+			font-size: 2.4rem;
+			font-family: 'Carter One', cursive;
+			width: 17rem;
+			position: absolute;
+			padding: 1rem;
+			text-align: center;
+			line-height: 3.1rem;
+			resize: none;
+			color: #a33948;
+			padding-left: 1.7rem;
+		}
+
+		.img-calc {
+			width: 17rem;
+			display: block;
+		}
+
+		#humanAge {
+			font-size: 2.4rem;
+			font-family: 'Carter One', cursive;
+		}
+	}
 }
 
 .life-span-section {
 	display: flex;
-}
 
-.lss-part-1 {
-	flex: 1 0 55%;
-	margin-right: 2rem;
-}
-
-.lss-part-2 {
-	display: flex;
-	flex-direction: column;
-}
-
-.lss-part-2 .frame-retro {
-	flex: 1;
-	max-height: 62%;
-}
-
-@media (max-width: 700px) {
-	.lss-part-1 {
-		flex: 1 0 55%;
-		margin-right: 0;
+	@media (max-width: 700px) {
+		flex-direction: column;
 	}
 
-	.life-span-section {
+	.lss-part-1 {
+		flex: 1 0 55%;
+		margin-right: 2rem;
+
+		@media (max-width: 700px) {
+			flex: 1 0 55%;
+			margin-right: 0;
+		}
+	}
+
+	.lss-part-2 {
+		display: flex;
 		flex-direction: column;
+
+		.frame-retro {
+			flex: 1;
+			max-height: 62%;
+		}
 	}
 }
 
