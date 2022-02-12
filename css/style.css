@@ -183,14 +183,6 @@ nav .nav-container .logo-frame {
   width: 18rem;
 }
 
-nav .nav-container .logo-frame .logo-frame-inside {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 161px;
-  outline: 0.1rem solid blue;
-}
-
 nav .nav-container .logo-frame .logo-frame-inside .logo-body {
   position: absolute;
   left: 0;
@@ -210,11 +202,6 @@ nav .nav-container .logo-frame .logo-frame-inside .logo-hand {
   transition: transform 0.7s ease, -webkit-transform 0.7s ease;
 }
 
-nav .nav-container .logo-frame .logo-frame-inside .logo-hand.animate {
-  -webkit-transform: translateY(166%) rotate(-8deg);
-          transform: translateY(166%) rotate(-8deg);
-}
-
 nav .nav-container .logo-frame .logo-frame-inside .logo-tail {
   position: absolute;
   left: 3%;
@@ -231,11 +218,6 @@ nav .nav-container .logo-frame .logo-frame-inside .logo-tail {
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-}
-
-nav .nav-container .logo-frame .logo-frame-inside .logo-tail.animate {
-  -webkit-transform: translateY(9%) rotate(-3deg);
-          transform: translateY(9%) rotate(-3deg);
 }
 
 nav .nav-container a.nav-title {
@@ -260,21 +242,6 @@ nav .nav-container .nav-p {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-}
-
-.dot {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: red;
-}
-
-.lineFrame {
-  position: relative;
-  font-size: 1.6rem;
-  border-radius: 0.2rem;
-  overflow: hidden;
-  padding-top: 1.7rem;
 }
 
 .red-fill-frame {

@@ -147,10 +147,6 @@ nav {
 			width: 18rem;
 
 			.logo-frame-inside {
-				display: flex;
-				height: 161px;
-				outline: 0.1rem solid blue;
-
 				.logo-body {
 					position: absolute;
 					left: 0;
@@ -165,10 +161,6 @@ nav {
 					transition: transform 0.7s ease;
 				}
 
-				.logo-hand.animate {
-					transform: translateY(166%) rotate(-8deg);
-				}
-
 				.logo-tail {
 					position: absolute;
 					left: 3%;
@@ -179,10 +171,6 @@ nav {
 					animation-duration: 2s;
 					animation-iteration-count: infinite;
 					animation-direction: alternate;
-				}
-
-				.logo-tail.animate {
-					transform: translateY(9%) rotate(-3deg);
 				}
 			}
 		}
@@ -209,21 +197,6 @@ nav {
 			transform: translateX(-50%);
 		}
 	}
-}
-
-.dot {
-	position: absolute;
-	width: 5px;
-	height: 5px;
-	background-color: red;
-}
-
-.lineFrame {
-	position: relative;
-	font-size: 1.6rem;
-	border-radius: 0.2rem;
-	overflow: hidden;
-	padding-top: 1.7rem;
 }
 
 .red-fill-frame {
