@@ -104,6 +104,10 @@ section {
   margin-bottom: 2rem;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
 nav {
   display: relative;
   max-width: 80rem;
@@ -173,6 +177,10 @@ nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a {
   color: #f4e7d7;
   text-decoration: none;
   font-size: 1.4rem;
+}
+
+nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a:hover {
+  color: #e02424;
 }
 
 nav .nav-container .logo-frame {
@@ -333,16 +341,25 @@ nav .nav-container .nav-p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 }
 
-.frame-retro.frame-etymology .etymology-inside-duo span {
+@media (max-width: 700px) {
+  .frame-retro.frame-etymology .etymology-inside-duo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.frame-retro.frame-etymology span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.frame-retro.frame-etymology .etymology-inside-duo figure {
+.frame-retro.frame-etymology figure {
   max-width: 25%;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
@@ -356,7 +373,16 @@ nav .nav-container .nav-p {
   padding-right: 1.5rem;
 }
 
-.frame-retro.frame-etymology .etymology-inside-duo figure img {
+@media (max-width: 700px) {
+  .frame-retro.frame-etymology figure {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 50%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.frame-retro.frame-etymology figure img {
   width: 100%;
 }
 
@@ -369,6 +395,41 @@ nav .nav-container .nav-p {
   bottom: 0.1rem;
   right: 0;
   height: 12rem;
+}
+
+.frame-retro.frame-calculator {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-height: 62%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.frame-retro.frame-calculator h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.1rem;
+  font-family: 'Carter One', cursive;
+  font-weight: 100;
+}
+
+.frame-retro.frame-calculator p:first-of-type {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.frame-retro.frame-calculator p:last-child {
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 .frame-retro.frame-calculator .frame-calc {
@@ -398,6 +459,8 @@ nav .nav-container .nav-p {
   resize: none;
   color: #a33948;
   padding-left: 1.7rem;
+  outline: none;
+  border: none;
 }
 
 .frame-retro.frame-calculator .img-calc {
@@ -438,6 +501,7 @@ nav .nav-container .nav-p {
         -ms-flex: 1 0 55%;
             flex: 1 0 55%;
     margin-right: 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -451,11 +515,10 @@ nav .nav-container .nav-p {
           flex-direction: column;
 }
 
-.life-span-section .lss-part-2 .frame-retro {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  max-height: 62%;
+@media (max-width: 700px) {
+  .life-span-section .lss-part-2 .red-fill-frame {
+    margin-bottom: 2rem;
+  }
 }
 
 /* // noise texture

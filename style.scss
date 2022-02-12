@@ -74,6 +74,10 @@ section {
 	margin-bottom: 2rem;
 }
 
+.text-italic {
+	font-style: italic;
+}
+
 nav {
 	display: relative;
 	max-width: 80rem;
@@ -133,6 +137,10 @@ nav {
 							color: #f4e7d7;
 							text-decoration: none;
 							font-size: 1.4rem;
+
+							&:hover {
+								color: #e02424;
+							}
 						}
 					}
 				}
@@ -294,23 +302,34 @@ nav {
 	&.frame-etymology {
 		.etymology-inside-duo {
 			display: flex;
-			margin-top: 1rem;
+			margin-top: 2.5rem;
+
+			@media (max-width: 700px) {
+				flex-direction: column;
+			}
 		}
 
-		.etymology-inside-duo span {
+		span {
 			display: flex;
 		}
 
-		.etymology-inside-duo figure {
+		figure {
 			max-width: 25%;
 			flex: 1 0 100%;
 			display: flex;
 			align-items: center;
 			padding-right: 1.5rem;
-		}
 
-		.etymology-inside-duo figure img {
-			width: 100%;
+			@media (max-width: 700px) {
+				margin-right: auto;
+				margin-left: auto;
+				max-width: 50%;
+				margin-bottom: 1.5rem;
+			}
+
+			img {
+				width: 100%;
+			}
 		}
 	}
 
@@ -326,6 +345,33 @@ nav {
 	}
 
 	&.frame-calculator {
+		flex: 1;
+		max-height: 62%;
+		display: flex;
+		flex-direction: column;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 1rem;
+			font-size: 2.1rem;
+			font-family: 'Carter One', cursive;
+			font-weight: 100;
+		}
+
+		p {
+			&:first-of-type {
+				text-align: center;
+				margin-bottom: 1.5rem;
+				padding-right: 1rem;
+				padding-left: 1rem;
+				font-style: italic;
+			}
+			&:last-child {
+				text-align: center;
+				margin-top: 1.5rem;
+			}
+		}
+
 		.frame-calc {
 			margin: auto;
 			height: 92px;
@@ -347,6 +393,8 @@ nav {
 			resize: none;
 			color: #a33948;
 			padding-left: 1.7rem;
+			outline: none;
+			border: none;
 		}
 
 		.img-calc {
@@ -375,6 +423,7 @@ nav {
 		@media (max-width: 700px) {
 			flex: 1 0 55%;
 			margin-right: 0;
+			margin-bottom: 1rem;
 		}
 	}
 
@@ -382,9 +431,10 @@ nav {
 		display: flex;
 		flex-direction: column;
 
-		.frame-retro {
-			flex: 1;
-			max-height: 62%;
+		.red-fill-frame {
+			@media (max-width: 700px) {
+				margin-bottom: 2rem;
+			}
 		}
 	}
 }

@@ -83,7 +83,7 @@
 						<figure>
 							<img src="/img/book.svg" alt="" />
 						</figure>
-						<span>
+						<span class="text-italic">
 							The English puss, extended as pussy and pussycat, is attested from
 							the 16th century and may have been introduced from Dutch poes or
 							from Low German puuskatte, related to Swedish kattepus, or
@@ -150,7 +150,11 @@
 					</div>
 
 					<div class="frame-retro frame-calculator">
-						<p class="mb-15">How old is your cat?</p>
+						<h3>Get your cat's age</h3>
+						<p>
+							Find out how old in human years your feline is, using calculator
+							bellow
+						</p>
 						<form class="frame-calc" action="#" onsubmit="return false;">
 							<img
 								class="img-calc"
@@ -166,12 +170,12 @@
 								class="input-calc"
 								name="catAge"
 								id="catAge"
-								placeholder="Cat age"
+								placeholder="Cat years"
 								oninput="validity.valid||(value=''); calcCatAge();"
 							/>
 						</form>
 
-						<p class="centerText mt-15">
+						<p>
 							Your cat age is <span id="humanAge">?</span> years in human years.
 						</p>
 					</div>
