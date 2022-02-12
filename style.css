@@ -145,12 +145,12 @@ section {
 .nav-holder {
 	cursor: pointer;
 	position: relative;
-	top: 0;
+	top: -1.6rem;
 }
 
 .nav-ul-wrapper {
 	position: absolute;
-	top: -6%;
+	top: 26%;
 	left: 0;
 	right: 0;
 	outline: 1px solid red;
@@ -225,7 +225,6 @@ section {
 	max-width: 100%;
 	margin: auto;
 	position: relative;
-	top: -1.6rem;
 	min-height: 5.028rem;
 }
 
@@ -259,29 +258,29 @@ transform: rotate(-7deg); */
 	/* width: 300px;
   height: 550px; */
 	position: relative;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	border-radius: 0.2rem;
 	overflow: hidden;
 	padding-top: 17px;
 }
 
-.redFillFrame {
+.red-fill-frame {
 	/* width: 300px;
   height: 550px; */
 	position: relative;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 	border-radius: 0.2rem;
 	/* overflow: hidden; */
 	padding-top: 17px;
 	color: #f4e7d7;
-	margin-top: 78px;
 	/* background-color: #a33948; */
 	background-image: url('./img/rfillframe3.png');
 	mix-blend-mode: multiply;
-	margin-top: auto;
+	margin-top: 5.8rem;
+	margin-bottom: auto;
 }
 
-.redFillFrame::before {
+.red-fill-frame::before {
 	content: '';
 	display: block;
 	background-image: url(../img/rfillframe1.png);
@@ -293,7 +292,7 @@ transform: rotate(-7deg); */
 	top: -49px;
 }
 
-.redFillFrame::after {
+.red-fill-frame::after {
 	content: '';
 	display: block;
 	background-image: url(../img/rfillframe2.png);
@@ -306,7 +305,7 @@ transform: rotate(-7deg); */
 	width: calc(100% - 49px);
 }
 
-.redFillFrame > div {
+.red-fill-frame > div {
 	position: relative;
 	top: -31px;
 	left: 0;
@@ -315,7 +314,7 @@ transform: rotate(-7deg); */
 	text-align: center;
 }
 
-.redFillFrame > ::before {
+.red-fill-frame > ::before {
 	content: '';
 	display: block;
 	background-image: url(../img/paw.png);
@@ -453,7 +452,7 @@ transform: rotate(-7deg); */
 
 	position: relative;
 	padding: 2.8rem 2rem;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
 }
 
 .frame-retro h2 {
@@ -520,7 +519,7 @@ transform: rotate(-7deg); */
 
 .lss-part-2 .frame-retro {
 	flex: 1;
-	max-height: 60%;
+	max-height: 62%;
 }
 
 /* // noise texture
