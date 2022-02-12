@@ -24,6 +24,10 @@ html {
 body {
 	box-sizing: border-box;
 }
+
+ul {
+	list-style-type: none;
+}
 // CSS reset --- END
 
 body {
@@ -92,11 +96,15 @@ nav {
 		.nav-top-img {
 			display: block;
 			max-width: 100%;
-			min-height: 15rem;
+			height: 15rem;
 			position: relative;
 			left: 2rem;
 			bottom: 0.2rem;
 			mix-blend-mode: multiply;
+
+			@media (max-width: 500px) {
+				height: 12rem;
+			}
 		}
 
 		.nav-holder {
@@ -153,6 +161,15 @@ nav {
 			height: auto;
 			top: -0.1rem;
 			width: 18rem;
+			transition: width 0.6s ease;
+
+			@media (max-width: 700px) {
+				width: 16rem;
+			}
+
+			@media (max-width: 500px) {
+				width: 12rem;
+			}
 
 			.logo-frame-inside {
 				.logo-body {
@@ -186,13 +203,23 @@ nav {
 		a.nav-title {
 			font-size: 3.5rem;
 			text-decoration: none;
-			top: 4rem;
+			top: 3.5rem;
 			left: 11.2rem;
 			position: absolute;
 			font-family: 'Carter One', cursive;
 			color: #f4e7d7;
 			left: 50%;
 			transform: translateX(-50%);
+			line-height: 1em;
+
+			@media (max-width: 700px) {
+				left: calc(50% + 4.6rem);
+			}
+
+			@media (max-width: 500px) {
+				top: 1rem;
+				font-size: 2.5rem;
+			}
 		}
 
 		.nav-p {
@@ -203,6 +230,15 @@ nav {
 			color: #f4e7d7;
 			left: 50%;
 			transform: translateX(-50%);
+
+			@media (max-width: 700px) {
+				left: calc(50% + 4rem);
+			}
+
+			@media (max-width: 500px) {
+				top: 5rem;
+				font-size: 1.4rem;
+			}
 		}
 	}
 }
@@ -264,12 +300,6 @@ nav {
 			top: -46px;
 			left: -2px;
 		}
-	}
-}
-
-@media only screen and (min-width: 800px) {
-	.nav-top-img {
-		display: block;
 	}
 }
 

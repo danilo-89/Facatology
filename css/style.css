@@ -39,6 +39,10 @@ body {
           box-sizing: border-box;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   background-color: #faf1de;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(194, 152, 107, 0.12)), color-stop(11%, rgba(200, 160, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0)), color-stop(65%, rgba(200, 160, 0, 0.1))), url(/img/noise-texture.png);
@@ -124,11 +128,17 @@ nav .nav-container {
 nav .nav-container .nav-top-img {
   display: block;
   max-width: 100%;
-  min-height: 15rem;
+  height: 15rem;
   position: relative;
   left: 2rem;
   bottom: 0.2rem;
   mix-blend-mode: multiply;
+}
+
+@media (max-width: 500px) {
+  nav .nav-container .nav-top-img {
+    height: 12rem;
+  }
 }
 
 nav .nav-container .nav-holder {
@@ -189,6 +199,20 @@ nav .nav-container .logo-frame {
   height: auto;
   top: -0.1rem;
   width: 18rem;
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+
+@media (max-width: 700px) {
+  nav .nav-container .logo-frame {
+    width: 16rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav .nav-container .logo-frame {
+    width: 12rem;
+  }
 }
 
 nav .nav-container .logo-frame .logo-frame-inside .logo-body {
@@ -231,7 +255,7 @@ nav .nav-container .logo-frame .logo-frame-inside .logo-tail {
 nav .nav-container a.nav-title {
   font-size: 3.5rem;
   text-decoration: none;
-  top: 4rem;
+  top: 3.5rem;
   left: 11.2rem;
   position: absolute;
   font-family: 'Carter One', cursive;
@@ -239,6 +263,20 @@ nav .nav-container a.nav-title {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  line-height: 1em;
+}
+
+@media (max-width: 700px) {
+  nav .nav-container a.nav-title {
+    left: calc(50% + 4.6rem);
+  }
+}
+
+@media (max-width: 500px) {
+  nav .nav-container a.nav-title {
+    top: 1rem;
+    font-size: 2.5rem;
+  }
 }
 
 nav .nav-container .nav-p {
@@ -250,6 +288,19 @@ nav .nav-container .nav-p {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+@media (max-width: 700px) {
+  nav .nav-container .nav-p {
+    left: calc(50% + 4rem);
+  }
+}
+
+@media (max-width: 500px) {
+  nav .nav-container .nav-p {
+    top: 5rem;
+    font-size: 1.4rem;
+  }
 }
 
 .red-fill-frame {
@@ -310,12 +361,6 @@ nav .nav-container .nav-p {
   height: 38px;
   top: -46px;
   left: -2px;
-}
-
-@media only screen and (min-width: 800px) {
-  .nav-top-img {
-    display: block;
-  }
 }
 
 .frame-retro {
