@@ -91,7 +91,6 @@ section {
 }
 
 nav {
-	display: relative;
 	max-width: 80rem;
 	margin-right: auto;
 	margin-left: auto;
@@ -113,6 +112,7 @@ nav {
 			left: 2rem;
 			bottom: 0.2rem;
 			mix-blend-mode: multiply;
+			transition: transform 0.9s ease, opacity 0.4s ease;
 
 			@media (max-width: 500px) {
 				height: 11rem;
@@ -431,6 +431,14 @@ nav.expanded {
 				}
 			}
 		}
+	}
+}
+
+nav.before-animation {
+	.nav-top-img,
+	.logo-frame {
+		transform: translateX(-120%) !important;
+		opacity: 0;
 	}
 }
 

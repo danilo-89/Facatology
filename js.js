@@ -7,6 +7,10 @@ const humanAgeInput = document.getElementById('humanAge');
 const catAgeInput = calcForm.elements['catAge'];
 const errorSpan = document.getElementById('errorSpan');
 
+window.onload = function () {
+	nav.classList.remove('before-animation');
+};
+
 navBtn.addEventListener('click', () => {
 	nav.classList.add('expanded');
 });

@@ -113,7 +113,6 @@ section {
 }
 
 nav {
-  display: relative;
   max-width: 80rem;
   margin-right: auto;
   margin-left: auto;
@@ -139,6 +138,10 @@ nav .nav-container .nav-top-img {
   left: 2rem;
   bottom: 0.2rem;
   mix-blend-mode: multiply;
+  -webkit-transition: opacity 0.4s ease, -webkit-transform 0.9s ease;
+  transition: opacity 0.4s ease, -webkit-transform 0.9s ease;
+  transition: transform 0.9s ease, opacity 0.4s ease;
+  transition: transform 0.9s ease, opacity 0.4s ease, -webkit-transform 0.9s ease;
 }
 
 @media (max-width: 500px) {
@@ -504,6 +507,13 @@ nav .nav-container .nav-p {
   nav.expanded .nav-container .nav-holder .nav-bottom-img {
     display: none;
   }
+}
+
+nav.before-animation .nav-top-img,
+nav.before-animation .logo-frame {
+  -webkit-transform: translateX(-120%) !important;
+          transform: translateX(-120%) !important;
+  opacity: 0;
 }
 
 .red-fill-frame {
