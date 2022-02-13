@@ -286,6 +286,12 @@ nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul {
 @media (max-width: 700px) {
   nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul {
     padding-left: 15rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 530px) {
+  nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul {
     padding-right: 2rem;
   }
 }
@@ -610,7 +616,6 @@ nav .nav-container .nav-p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  max-height: 62%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,6 +623,13 @@ nav .nav-container .nav-p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+  .frame-retro.frame-calculator {
+    margin-top: 0;
+  }
 }
 
 .frame-retro.frame-calculator h3 {
