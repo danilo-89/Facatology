@@ -93,6 +93,10 @@ nav {
 		display: block;
 		max-width: calc(100% - 2rem);
 
+		@media (max-width: 500px) {
+			margin-bottom: 2rem;
+		}
+
 		.nav-top-img {
 			display: block;
 			max-width: 100%;
@@ -103,7 +107,62 @@ nav {
 			mix-blend-mode: multiply;
 
 			@media (max-width: 500px) {
-				height: 12rem;
+				height: 11rem;
+			}
+		}
+
+		.nav-btn {
+			outline: none;
+			background-color: #f5e9c8;
+			border: 0.3rem solid #9a3337;
+			width: 5rem;
+			height: 5rem;
+			border-radius: 50%;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			right: -1rem;
+			bottom: 0;
+			cursor: pointer;
+
+			@media (max-width: 500px) {
+				display: flex;
+				flex-direction: column;
+			}
+
+			&:hover {
+				span {
+					transform: rotate(0deg);
+					background-color: #464545;
+				}
+			}
+
+			span {
+				display: block;
+				background-color: #666666;
+				height: 0.3rem;
+				width: 55%;
+				transform: rotate(-4deg);
+				transition: transform 0.7s ease;
+
+				&:nth-of-type(1) {
+					margin-top: 0.1rem;
+				}
+
+				&:nth-of-type(2) {
+					width: 45%;
+					padding-left: 0.25rem;
+				}
+
+				&:nth-of-type(3) {
+					width: 50%;
+					padding-left: 0.5rem;
+				}
+
+				&:not(:last-of-type) {
+					margin-bottom: 0.5rem;
+				}
 			}
 		}
 
@@ -112,6 +171,12 @@ nav {
 			position: relative;
 			top: -1.6rem;
 			left: 1rem;
+
+			@media (max-width: 500px) {
+				max-width: 0;
+				max-height: 0;
+				overflow: hidden;
+			}
 
 			&:hover ~ .logo-frame .logo-hand {
 				transform: translateY(186%) rotate(28deg) !important;
@@ -131,8 +196,12 @@ nav {
 				top: 26%;
 				left: 0;
 				right: 0;
-				outline: 1px solid red;
 				transform: rotate(-1.5deg);
+
+				@media (max-width: 700px) {
+					top: 24%;
+					transform: rotate(-2deg);
+				}
 
 				.nav-ul {
 					display: flex;
@@ -140,11 +209,24 @@ nav {
 					padding-left: 15rem;
 					padding-right: 5rem;
 
+					@media (max-width: 700px) {
+						padding-right: 2rem;
+					}
+
 					li {
+						@media (max-width: 700px) {
+							&:not(:last-of-type) {
+								margin-right: 0.5rem;
+							}
+						}
 						a {
 							color: #f4e7d7;
 							text-decoration: none;
 							font-size: 1.4rem;
+
+							@media (max-width: 700px) {
+								color: #404041;
+							}
 
 							&:hover {
 								color: #e02424;
@@ -157,18 +239,17 @@ nav {
 
 		.logo-frame {
 			position: absolute;
-			z-index: 8;
 			height: auto;
 			top: -0.1rem;
 			width: 18rem;
 			transition: width 0.6s ease;
 
 			@media (max-width: 700px) {
-				width: 16rem;
+				width: 18rem;
 			}
 
 			@media (max-width: 500px) {
-				width: 12rem;
+				width: 11.5rem;
 			}
 
 			.logo-frame-inside {
@@ -217,7 +298,7 @@ nav {
 			}
 
 			@media (max-width: 500px) {
-				top: 1rem;
+				top: 2rem;
 				font-size: 2.5rem;
 			}
 		}
@@ -243,6 +324,25 @@ nav {
 	}
 }
 
+.expanded {
+	.nav-container .nav-holder {
+		max-width: 100rem;
+		max-height: 100rem;
+		overflow: hidden;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: #f4e7d7;
+		z-index: 1;
+
+		.nav-bottom-img {
+			display: none;
+		}
+	}
+}
+
 .red-fill-frame {
 	position: relative;
 	font-size: 1.6rem;
@@ -258,7 +358,7 @@ nav {
 	&::before {
 		content: '';
 		display: block;
-		background-image: url(../img/rfillframe1.png);
+		background-image: url('../img/rfillframe1.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
@@ -270,7 +370,7 @@ nav {
 	&::after {
 		content: '';
 		display: block;
-		background-image: url(../img/rfillframe2.png);
+		background-image: url('../img/rfillframe2.png');
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
