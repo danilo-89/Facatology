@@ -217,7 +217,6 @@ nav .nav-container .nav-btn span:not(:last-of-type) {
 }
 
 nav .nav-container .nav-holder {
-  cursor: pointer;
   position: relative;
   top: -1.6rem;
   left: 1rem;
@@ -269,12 +268,13 @@ nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-left: 15rem;
-  padding-right: 5rem;
+  padding-left: 20rem;
+  padding-right: 10rem;
 }
 
 @media (max-width: 700px) {
   nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul {
+    padding-left: 15rem;
     padding-right: 2rem;
   }
 }
@@ -289,12 +289,6 @@ nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a {
   color: #f4e7d7;
   text-decoration: none;
   font-size: 1.4rem;
-}
-
-@media (max-width: 700px) {
-  nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a {
-    color: #404041;
-  }
 }
 
 nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a:hover {
@@ -410,21 +404,54 @@ nav .nav-container .nav-p {
   }
 }
 
-.expanded .nav-container .nav-holder {
-  max-width: 100rem;
-  max-height: 100rem;
-  overflow: hidden;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #f4e7d7;
-  z-index: 1;
-}
-
-.expanded .nav-container .nav-holder .nav-bottom-img {
-  display: none;
+@media (max-width: 500px) {
+  nav.expanded .nav-container .nav-holder {
+    max-width: unset;
+    max-height: unset;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(63, 63, 64, 0.4);
+    z-index: 1;
+  }
+  nav.expanded .nav-container .nav-holder .nav-ul-wrapper {
+    padding-top: 10rem;
+    background-color: #faf1de;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(194, 152, 107, 0.12)), color-stop(11%, rgba(200, 160, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0)), color-stop(65%, rgba(200, 160, 0, 0.1))), url(/img/noise-texture.png);
+    background-image: linear-gradient(to right, rgba(194, 152, 107, 0.12), rgba(200, 160, 0, 0.1) 11%, rgba(0, 0, 0, 0) 35%, rgba(200, 160, 0, 0.1) 65%), url(/img/noise-texture.png);
+    -webkit-box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px rgba(179, 149, 111, 0.5), inset 0 0 30px rgba(181, 134, 90, 0.75);
+            box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px rgba(179, 149, 111, 0.5), inset 0 0 30px rgba(181, 134, 90, 0.75);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    width: 70%;
+    min-width: 20rem;
+  }
+  nav.expanded .nav-container .nav-holder .nav-ul-wrapper .nav-ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 4rem;
+  }
+  nav.expanded .nav-container .nav-holder .nav-ul-wrapper .nav-ul li {
+    margin-bottom: 2rem;
+  }
+  nav.expanded .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a {
+    color: #404041;
+    font-size: 2.1rem;
+  }
+  nav.expanded .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a:hover {
+    color: #a33948;
+  }
+  nav.expanded .nav-container .nav-holder .nav-bottom-img {
+    display: none;
+  }
 }
 
 .red-fill-frame {

@@ -167,7 +167,6 @@ nav {
 		}
 
 		.nav-holder {
-			cursor: pointer;
 			position: relative;
 			top: -1.6rem;
 			left: 1rem;
@@ -206,10 +205,11 @@ nav {
 				.nav-ul {
 					display: flex;
 					justify-content: space-between;
-					padding-left: 15rem;
-					padding-right: 5rem;
+					padding-left: 20rem;
+					padding-right: 10rem;
 
 					@media (max-width: 700px) {
+						padding-left: 15rem;
 						padding-right: 2rem;
 					}
 
@@ -223,10 +223,6 @@ nav {
 							color: #f4e7d7;
 							text-decoration: none;
 							font-size: 1.4rem;
-
-							@media (max-width: 700px) {
-								color: #404041;
-							}
 
 							&:hover {
 								color: #e02424;
@@ -324,21 +320,63 @@ nav {
 	}
 }
 
-.expanded {
-	.nav-container .nav-holder {
-		max-width: 100rem;
-		max-height: 100rem;
-		overflow: hidden;
-		position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		background-color: #f4e7d7;
-		z-index: 1;
+nav.expanded {
+	@media (max-width: 500px) {
+		.nav-container {
+			.nav-holder {
+				max-width: unset;
+				max-height: unset;
+				overflow: hidden;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-color: hsla(240, 1%, 25%, 0.4);
+				z-index: 1;
 
-		.nav-bottom-img {
-			display: none;
+				.nav-ul-wrapper {
+					padding-top: 10rem;
+					background-color: #faf1de;
+					background-image: linear-gradient(
+							to right,
+							hsla(31, 42%, 59%, 0.12),
+							rgba(200, 160, 0, 0.1) 11%,
+							rgba(0, 0, 0, 0) 35%,
+							rgba(200, 160, 0, 0.1) 65%
+						),
+						url(/img/noise-texture.png);
+					box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02),
+						inset 0 0 20px hsla(33, 31%, 57%, 0.5),
+						inset 0 0 30px hsla(29, 38%, 53%, 0.75);
+					height: 100%;
+					position: absolute;
+					top: 0;
+					transform: rotate(0deg);
+					width: 70%;
+					min-width: 20rem;
+
+					.nav-ul {
+						flex-direction: column;
+						padding-left: 4rem;
+						li {
+							margin-bottom: 2rem;
+							a {
+								color: #404041;
+								font-size: 2.1rem;
+
+								&:hover {
+									color: #a33948;
+								}
+							}
+						}
+					}
+				}
+
+				.nav-bottom-img {
+					display: none;
+				}
+			}
 		}
 	}
 }
