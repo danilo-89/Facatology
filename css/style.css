@@ -296,6 +296,35 @@ nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul {
   }
 }
 
+nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul .close-btn {
+  outline: none;
+  background-color: transparent;
+  border: 0.3rem solid #9a3337;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-family: 'Carter One', cursive;
+  margin-bottom: 3.5rem;
+  font-size: 2.5rem;
+  color: #666666;
+  left: 50%;
+  position: relative;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul .close-btn:hover {
+  color: #404041;
+}
+
 @media (max-width: 700px) {
   nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li:not(:last-of-type) {
     margin-right: 0.5rem;
@@ -437,7 +466,7 @@ nav .nav-container .nav-p {
     position: fixed;
   }
   nav.expanded .nav-container .nav-holder .nav-ul-wrapper {
-    padding-top: 10rem;
+    padding-top: 3rem;
     background-color: #faf1de;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(194, 152, 107, 0.12)), color-stop(11%, rgba(200, 160, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0)), color-stop(65%, rgba(200, 160, 0, 0.1))), url(/img/noise-texture.png);
     background-image: linear-gradient(to right, rgba(194, 152, 107, 0.12), rgba(200, 160, 0, 0.1) 11%, rgba(0, 0, 0, 0) 35%, rgba(200, 160, 0, 0.1) 65%), url(/img/noise-texture.png);
@@ -457,6 +486,9 @@ nav .nav-container .nav-p {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-left: 4rem;
+  }
+  nav.expanded .nav-container .nav-holder .nav-ul-wrapper .nav-ul .close-btn {
+    display: inline-block;
   }
   nav.expanded .nav-container .nav-holder .nav-ul-wrapper .nav-ul li {
     margin-bottom: 2rem;
@@ -540,8 +572,15 @@ nav .nav-container .nav-p {
   background-size: 35px, 35px, 35px, 35px, calc(100% - 68px) 4px, 4px calc(100% - 68px), calc(100% - 68px) 4px, 4px calc(100% - 68px);
   background-repeat: no-repeat;
   position: relative;
-  padding: 2.8rem 2rem;
+  padding: 2.8rem 3rem;
   font-size: 1.6rem;
+}
+
+@media (max-width: 800px) {
+  .frame-retro {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .frame-retro h2 {
@@ -551,6 +590,11 @@ nav .nav-container .nav-p {
   white-space: nowrap;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.frame-retro p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .frame-retro.frame-etymology .etymology-inside-duo {
@@ -793,7 +837,4 @@ nav .nav-container .nav-p {
     margin-bottom: 2rem;
   }
 }
-
-/* // noise texture
-https://www.cssmatic.com/noise-texture */
 /*# sourceMappingURL=style.css.map */

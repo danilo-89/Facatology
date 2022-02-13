@@ -225,6 +225,31 @@ nav {
 						padding-right: 2rem;
 					}
 
+					.close-btn {
+						outline: none;
+						background-color: transparent;
+						border: 0.3rem solid #9a3337;
+						width: 5rem;
+						height: 5rem;
+						border-radius: 50%;
+						display: none;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+						font-family: 'Carter One', cursive;
+						margin-bottom: 3.5rem;
+						font-size: 2.5rem;
+						color: #666666;
+						left: 50%;
+						position: relative;
+						-webkit-transform: translateX(-50%);
+						transform: translateX(-50%);
+
+						&:hover {
+							color: #404041;
+						}
+					}
+
 					li {
 						@media (max-width: 700px) {
 							&:not(:last-of-type) {
@@ -350,7 +375,7 @@ nav.expanded {
 				position: fixed;
 
 				.nav-ul-wrapper {
-					padding-top: 10rem;
+					padding-top: 3rem;
 					background-color: #faf1de;
 					background-image: linear-gradient(
 							to right,
@@ -373,6 +398,11 @@ nav.expanded {
 					.nav-ul {
 						flex-direction: column;
 						padding-left: 4rem;
+
+						.close-btn {
+							display: inline-block;
+						}
+
 						li {
 							margin-bottom: 2rem;
 							a {
@@ -471,8 +501,13 @@ nav.expanded {
 	background-repeat: no-repeat;
 
 	position: relative;
-	padding: 2.8rem 2rem;
+	padding: 2.8rem 3rem;
 	font-size: 1.6rem;
+
+	@media (max-width: 800px) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 
 	h2 {
 		font-family: 'Carter One', cursive;
@@ -481,6 +516,11 @@ nav.expanded {
 		white-space: nowrap;
 		margin-bottom: 20px;
 		text-align: center;
+	}
+
+	p {
+		text-align: justify;
+		text-justify: inter-word;
 	}
 
 	&.frame-etymology {
@@ -665,6 +705,3 @@ nav.expanded {
 		}
 	}
 }
-
-/* // noise texture
-https://www.cssmatic.com/noise-texture */

@@ -1,9 +1,14 @@
 const nav = document.getElementById('nav');
 const navBtn = document.getElementById('navBtn');
+const closeBtn = document.getElementById('closeBtn');
 const navHolder = document.getElementById('navHolder');
 
 navBtn.addEventListener('click', () => {
 	nav.classList.add('expanded');
+});
+
+closeBtn.addEventListener('click', () => {
+	nav.classList.remove('expanded');
 });
 
 navHolder.addEventListener('click', function (event) {
