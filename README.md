@@ -6,4 +6,4 @@
 
 Initially I was just trying to make custom svg frames but as I progressed it seemed cool to make the whole page in this style.
 
-![](/img/screen.png)
+![](/img/screen.jpg)
