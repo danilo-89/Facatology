@@ -237,7 +237,7 @@ nav {
 							font-size: 1.4rem;
 
 							&:hover {
-								color: #e02424;
+								color: #d45559;
 							}
 						}
 					}
@@ -401,8 +401,9 @@ nav.expanded {
 	border-radius: 0.2rem;
 	padding-top: 1.7rem;
 	color: #fff;
-	background-color: #a33948;
-	background-image: url('./img/rfillframe3.png');
+	// background-color: #a33948;
+	background-image: url('/img/red-fill-frame/red-frame-rest.svg');
+	background-repeat: no-repeat;
 	mix-blend-mode: multiply;
 	margin-top: 5.8rem;
 	margin-bottom: auto;
@@ -410,26 +411,27 @@ nav.expanded {
 	&::before {
 		content: '';
 		display: block;
-		background-image: url('../img/rfillframe1.png');
+		background-image: url('/img/red-fill-frame/red-frame-top-cutout.svg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
 		width: 5rem;
 		height: 5rem;
-		top: -4.9rem;
+		top: -5rem;
 	}
 
 	&::after {
 		content: '';
 		display: block;
-		background-image: url('../img/rfillframe2.png');
+		background-image: url('/img/red-fill-frame/red-frame-top.svg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
-		height: 50px;
-		top: -49px;
+		height: 5rem;
+		top: -5rem;
 		right: 0;
-		width: calc(100% - 49px);
+		width: calc(100% - 5rem);
+		background-position: 100%;
 	}
 
 	.red-fill-frame-content {
@@ -443,7 +445,7 @@ nav.expanded {
 		&::before {
 			content: '';
 			display: block;
-			background-image: url(../img/paw.png);
+			background-image: url('/img/paw.svg');
 			background-repeat: no-repeat;
 			background-size: cover;
 			position: absolute;

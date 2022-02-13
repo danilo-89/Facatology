@@ -309,7 +309,7 @@ nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a {
 }
 
 nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a:hover {
-  color: #e02424;
+  color: #d45559;
 }
 
 nav .nav-container .logo-frame {
@@ -479,8 +479,8 @@ nav .nav-container .nav-p {
   border-radius: 0.2rem;
   padding-top: 1.7rem;
   color: #fff;
-  background-color: #a33948;
-  background-image: url("./img/rfillframe3.png");
+  background-image: url("/img/red-fill-frame/red-frame-rest.svg");
+  background-repeat: no-repeat;
   mix-blend-mode: multiply;
   margin-top: 5.8rem;
   margin-bottom: auto;
@@ -489,26 +489,27 @@ nav .nav-container .nav-p {
 .red-fill-frame::before {
   content: '';
   display: block;
-  background-image: url("../img/rfillframe1.png");
+  background-image: url("/img/red-fill-frame/red-frame-top-cutout.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   width: 5rem;
   height: 5rem;
-  top: -4.9rem;
+  top: -5rem;
 }
 
 .red-fill-frame::after {
   content: '';
   display: block;
-  background-image: url("../img/rfillframe2.png");
+  background-image: url("/img/red-fill-frame/red-frame-top.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  height: 50px;
-  top: -49px;
+  height: 5rem;
+  top: -5rem;
   right: 0;
-  width: calc(100% - 49px);
+  width: calc(100% - 5rem);
+  background-position: 100%;
 }
 
 .red-fill-frame .red-fill-frame-content {
@@ -523,7 +524,7 @@ nav .nav-container .nav-p {
 .red-fill-frame .red-fill-frame-content::before {
   content: '';
   display: block;
-  background-image: url(../img/paw.png);
+  background-image: url("/img/paw.svg");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
