@@ -695,6 +695,57 @@ nav .nav-container .nav-p {
   font-family: 'Carter One', cursive;
 }
 
+.frame-retro.frame-info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.8rem;
+  padding-top: 1.8rem;
+  border-top: 0.2rem solid #404041;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.frame-retro.frame-info div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.frame-retro.frame-info div img {
+  max-width: 10rem;
+  margin-right: 1rem;
+}
+
+@media (max-width: 500px) {
+  .frame-retro.frame-info div img {
+    max-width: 7rem;
+  }
+}
+
+.frame-retro.frame-info h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.frame-retro.frame-info a {
+  word-break: break-word;
+  color: #9a3337;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.frame-retro.frame-info a:hover {
+  color: #464545;
+}
+
 .life-span-section {
   display: -webkit-box;
   display: -ms-flexbox;
