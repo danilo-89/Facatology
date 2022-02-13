@@ -174,7 +174,9 @@ nav {
 			@media (max-width: 500px) {
 				max-width: 0;
 				max-height: 0;
-				overflow: hidden;
+				opacity: 0;
+				-webkit-transform: scale(0);
+				transform: scale(0);
 			}
 
 			&:hover ~ .logo-frame .logo-hand {
@@ -196,10 +198,16 @@ nav {
 				left: 0;
 				right: 0;
 				transform: rotate(-1.5deg);
+				transition: min-width 0.2s ease-out, max-width 0.3s ease;
 
 				@media (max-width: 700px) {
 					top: 24%;
 					transform: rotate(-2deg);
+				}
+
+				@media (max-width: 500px) {
+					min-width: 0;
+					max-width: 0;
 				}
 
 				.nav-ul {
@@ -324,16 +332,18 @@ nav.expanded {
 	@media (max-width: 500px) {
 		.nav-container {
 			.nav-holder {
-				max-width: unset;
-				max-height: unset;
-				overflow: hidden;
-				position: fixed;
+				max-width: 100%;
+				max-height: 100%;
+				opacity: 1;
+				-webkit-transform: scale(1);
+				transform: scale(1);
 				left: 0;
 				right: 0;
 				top: 0;
 				bottom: 0;
 				background-color: hsla(240, 1%, 25%, 0.4);
 				z-index: 1;
+				position: fixed;
 
 				.nav-ul-wrapper {
 					padding-top: 10rem;
