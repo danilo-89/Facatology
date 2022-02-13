@@ -152,7 +152,7 @@
 							Find out how old in human years your feline is, using calculator
 							bellow
 						</p>
-						<form class="frame-calc" action="#" onsubmit="return false;">
+						<form id="calcForm" class="frame-calc" type="">
 							<img
 								class="img-calc"
 								src="/img/calc-frame.svg"
@@ -162,15 +162,17 @@
 							/>
 							<input
 								type="number"
-								min="2"
-								max="35"
+								min="0.1"
+								max="50"
+								step="0.5"
 								class="input-calc"
 								name="catAge"
-								id="catAge"
-								placeholder="Cat years"
-								oninput="validity.valid||(value=''); calcCatAge();"
+								placeholder="Cat's age"
 							/>
 						</form>
+						<span id="errorSpan" class="error"
+							>Please enter valid age of a cat</span
+						>
 
 						<p>
 							Your cat age is <br />
@@ -268,6 +270,6 @@
 			</section>
 		</div>
 
-		<script src="./js.js"></script>
+		<script src="/js.js"></script>
 	</body>
 </html>

@@ -7,6 +7,14 @@
 	}
 }
 
+$red-1: #a33948;
+$red-2: #9a3337;
+$red-3: #d45559;
+$gray-dark: #404041;
+$gray: #666666;
+$yellow-light: #f4e7d7;
+$yellow-standard: #faf1de;
+
 // CSS reset --- START
 *,
 *::after,
@@ -31,7 +39,7 @@ ul {
 // CSS reset --- END
 
 body {
-	background-color: #faf1de;
+	background-color: $yellow-standard;
 	background-image: linear-gradient(
 			to right,
 			hsla(31, 42%, 59%, 0.12),
@@ -45,22 +53,22 @@ body {
 		inset 0 0 30px hsla(29, 38%, 53%, 0.75);
 	font-family: 'Itim', cursive;
 	line-height: 2.4rem;
-	color: #404041;
+	color: $gray-dark;
 	padding: 16px;
 }
 
 *::placeholder {
 	/* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: #a33948;
+	color: $red-1;
 	opacity: 1; /* Firefox */
 }
 *:-ms-input-placeholder {
 	/* Internet Explorer 10-11 */
-	color: #a33948;
+	color: $red-1;
 }
 *::-ms-input-placeholder {
 	/* Microsoft Edge */
-	color: #a33948;
+	color: $red-1;
 }
 
 img {
@@ -114,7 +122,7 @@ nav {
 		.nav-btn {
 			outline: none;
 			background-color: #f5e9c8;
-			border: 0.3rem solid #9a3337;
+			border: 0.3rem solid $red-2;
 			width: 5rem;
 			height: 5rem;
 			border-radius: 50%;
@@ -134,13 +142,13 @@ nav {
 			&:hover {
 				span {
 					transform: rotate(0deg);
-					background-color: #464545;
+					background-color: $gray-dark;
 				}
 			}
 
 			span {
 				display: block;
-				background-color: #666666;
+				background-color: $gray;
 				height: 0.3rem;
 				width: 55%;
 				transform: rotate(-4deg);
@@ -228,7 +236,7 @@ nav {
 					.close-btn {
 						outline: none;
 						background-color: transparent;
-						border: 0.3rem solid #9a3337;
+						border: 0.3rem solid $red-2;
 						width: 5rem;
 						height: 5rem;
 						border-radius: 50%;
@@ -239,14 +247,14 @@ nav {
 						font-family: 'Carter One', cursive;
 						margin-bottom: 3.5rem;
 						font-size: 2.5rem;
-						color: #666666;
+						color: $gray;
 						left: 50%;
 						position: relative;
 						-webkit-transform: translateX(-50%);
 						transform: translateX(-50%);
 
 						&:hover {
-							color: #404041;
+							color: $gray-dark;
 						}
 					}
 
@@ -257,12 +265,12 @@ nav {
 							}
 						}
 						a {
-							color: #f4e7d7;
+							color: $yellow-light;
 							text-decoration: none;
 							font-size: 1.4rem;
 
 							&:hover {
-								color: #d45559;
+								color: $red-3;
 							}
 						}
 					}
@@ -321,7 +329,7 @@ nav {
 			left: 11.2rem;
 			position: absolute;
 			font-family: 'Carter One', cursive;
-			color: #f4e7d7;
+			color: $yellow-light;
 			left: 50%;
 			transform: translateX(-50%);
 			line-height: 1em;
@@ -341,7 +349,7 @@ nav {
 			top: 8rem;
 			left: 16rem;
 			position: absolute;
-			color: #f4e7d7;
+			color: $yellow-light;
 			left: 50%;
 			transform: translateX(-50%);
 
@@ -376,7 +384,7 @@ nav.expanded {
 
 				.nav-ul-wrapper {
 					padding-top: 3rem;
-					background-color: #faf1de;
+					background-color: $yellow-standard;
 					background-image: linear-gradient(
 							to right,
 							hsla(31, 42%, 59%, 0.12),
@@ -392,12 +400,13 @@ nav.expanded {
 					position: absolute;
 					top: 0;
 					transform: rotate(0deg);
-					width: 70%;
+					width: 64%;
 					min-width: 20rem;
+					max-width: unset;
 
 					.nav-ul {
 						flex-direction: column;
-						padding-left: 4rem;
+						padding-left: 3rem;
 
 						.close-btn {
 							display: inline-block;
@@ -406,11 +415,11 @@ nav.expanded {
 						li {
 							margin-bottom: 2rem;
 							a {
-								color: #404041;
+								color: $gray-dark;
 								font-size: 2.1rem;
 
 								&:hover {
-									color: #a33948;
+									color: $red-1;
 								}
 							}
 						}
@@ -431,7 +440,7 @@ nav.expanded {
 	border-radius: 0.2rem;
 	padding-top: 1.7rem;
 	color: #fff;
-	// background-color: #a33948;
+	// background-color: $red-1;
 	background-image: url('/img/red-fill-frame/red-frame-rest.svg');
 	background-repeat: no-repeat;
 	mix-blend-mode: multiply;
@@ -619,10 +628,19 @@ nav.expanded {
 			text-align: center;
 			line-height: 3.1rem;
 			resize: none;
-			color: #a33948;
+			color: $red-1;
 			padding-left: 1.7rem;
 			outline: none;
 			border: none;
+		}
+
+		.error {
+			color: $red-2;
+			height: 1.5em;
+			font-size: 1.2rem;
+			text-align: center;
+			display: inline-block;
+			line-height: 1.5em;
 		}
 
 		.img-calc {
@@ -641,7 +659,7 @@ nav.expanded {
 			display: flex;
 			margin-top: 1.8rem;
 			padding-top: 1.8rem;
-			border-top: 0.2rem solid #404041;
+			border-top: 0.2rem solid $gray-dark;
 			justify-content: center;
 
 			p {
@@ -665,12 +683,12 @@ nav.expanded {
 		}
 		a {
 			word-break: break-word;
-			color: #9a3337;
+			color: $red-2;
 			text-decoration: none;
 			font-style: italic;
 
 			&:hover {
-				color: #464545;
+				text-decoration: underline;
 			}
 		}
 	}
