@@ -186,6 +186,7 @@ nav .nav-container .nav-btn {
 }
 
 nav .nav-container .nav-btn img {
+  width: 100%;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
   opacity: 0.8;
