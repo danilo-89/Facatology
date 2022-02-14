@@ -44,7 +44,7 @@ function calcCatAge() {
 		humanYears = 15 * +catAge.toFixed(1);
 	} else if (catAge > 1 && catAge <= 2) {
 		humanYears = 15 + 9 * (+catAge.toFixed(1) - 1);
-	} else if (catAge > 2 && catAge <= 45) {
+	} else if (catAge > 2 && catAge <= 50) {
 		humanYears = 4 * +catAge.toFixed(1) + 16;
 	} else {
 		humanAgeInput.innerText = '?';
