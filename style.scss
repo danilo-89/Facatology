@@ -132,6 +132,9 @@ nav {
 			position: absolute;
 			right: -1rem;
 			bottom: 0;
+			padding: 0.8rem;
+			padding-left: 1rem;
+			padding-top: 0.9rem;
 			cursor: pointer;
 
 			@media (max-width: 500px) {
@@ -139,37 +142,16 @@ nav {
 				flex-direction: column;
 			}
 
-			&:hover {
-				span {
-					transform: rotate(0deg);
-					background-color: $gray-dark;
-				}
+			img {
+				transform: rotate(-15deg);
+				opacity: 0.8;
+				transition: transform 0.6s ease, opacity 0.6s ease;
 			}
 
-			span {
-				display: block;
-				background-color: $gray;
-				height: 0.3rem;
-				width: 55%;
-				transform: rotate(-4deg);
-				transition: transform 0.7s ease;
-
-				&:nth-of-type(1) {
-					margin-top: 0.1rem;
-				}
-
-				&:nth-of-type(2) {
-					width: 45%;
-					padding-left: 0.25rem;
-				}
-
-				&:nth-of-type(3) {
-					width: 50%;
-					padding-left: 0.5rem;
-				}
-
-				&:not(:last-of-type) {
-					margin-bottom: 0.5rem;
+			&:hover {
+				img {
+					opacity: 1;
+					transform: rotate(-5deg);
 				}
 			}
 		}
