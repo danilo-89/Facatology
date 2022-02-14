@@ -11,11 +11,11 @@ window.onload = function () {
 	nav.classList.remove('before-animation');
 };
 
-navBtn.addEventListener('click', () => {
+navBtn.addEventListener('click', function () {
 	nav.classList.add('expanded');
 });
 
-closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener('click', function () {
 	nav.classList.remove('expanded');
 });
 
