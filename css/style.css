@@ -320,7 +320,19 @@ nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul .close-btn:hover {
 nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a {
   color: #f4e7d7;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 800px) {
+  nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a {
+    font-size: 1.4rem;
+  }
 }
 
 nav .nav-container .nav-holder .nav-ul-wrapper .nav-ul li a:hover {
@@ -548,6 +560,16 @@ nav.before-animation .logo-frame {
   text-align: center;
 }
 
+.red-fill-frame .red-fill-frame-content p {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 500px) {
+  .red-fill-frame .red-fill-frame-content p {
+    font-size: 1.6rem;
+  }
+}
+
 .red-fill-frame .red-fill-frame-content::before {
   content: '';
   display: block;
@@ -568,7 +590,8 @@ nav.before-animation .logo-frame {
   background-repeat: no-repeat;
   position: relative;
   padding: 2.8rem 3rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 1.45em;
 }
 
 @media (max-width: 800px) {
@@ -581,15 +604,28 @@ nav.before-animation .logo-frame {
 .frame-retro h2 {
   font-family: 'Carter One', cursive;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 3.2rem;
   white-space: nowrap;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .frame-retro h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .frame-retro p {
   text-align: justify;
   text-justify: inter-word;
+}
+
+@media (max-width: 500px) {
+  .frame-retro p {
+    font-size: 1.6rem;
+  }
 }
 
 .frame-retro.frame-etymology .etymology-inside-duo {
@@ -676,7 +712,7 @@ nav.before-animation .logo-frame {
 
 .frame-retro.frame-calculator h3 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 2.1rem;
   font-family: 'Carter One', cursive;
   font-weight: 100;
@@ -696,7 +732,9 @@ nav.before-animation .logo-frame {
 }
 
 .frame-retro.frame-calculator .frame-calc {
-  margin: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
   height: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,6 +776,7 @@ nav.before-animation .logo-frame {
   text-align: center;
   display: inline-block;
   line-height: 1.5em;
+  margin-bottom: auto;
 }
 
 .frame-retro.frame-calculator .img-calc {
