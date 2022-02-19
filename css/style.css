@@ -561,7 +561,7 @@ nav.before-animation .logo-frame {
 }
 
 .red-fill-frame .red-fill-frame-content p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 @media (max-width: 500px) {
@@ -590,7 +590,7 @@ nav.before-animation .logo-frame {
   background-repeat: no-repeat;
   position: relative;
   padding: 2.8rem 3rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.45em;
 }
 
