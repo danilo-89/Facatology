@@ -127,8 +127,10 @@ a.btn-retro,
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   color: #404041;
+  text-decoration: none;
   font-size: 1.6rem;
   font-family: "Itim", cursive;
+  display: inline-block;
   letter-spacing: 0.05em;
   outline: none;
   border-color: #5d5d5f;
