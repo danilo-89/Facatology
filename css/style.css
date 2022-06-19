@@ -140,8 +140,9 @@ a.btn-retro,
           box-shadow: 0.7rem 0.6rem 1.5rem 0 hsla(0deg, 0%, 0%, 0.121);
   border-radius: 25.5rem 1.5rem 22.5rem 1.5rem/1.5rem 22.5rem 1.5rem 25.5rem;
   border-bottom-width: 0.3rem;
-  background: #f2e6c5 url(../img/dot-pattern.svg) repeat-x bottom center;
+  background: #f3e7d7 url(../img/dot-pattern.svg) repeat-x bottom center;
   background-size: 0.4em;
+  mix-blend-mode: multiply;
   cursor: pointer;
 }
 a.btn-retro:hover,
