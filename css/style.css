@@ -151,7 +151,8 @@ a.btn-retro:hover,
           box-shadow: 0.2rem 0.8rem 0.4rem -0.6rem hsla(0deg, 0%, 0%, 0.3);
 }
 
-*:focus-visible {
+*:focus-visible,
+a:focus-visible {
   outline: #453bdb auto 1px;
 }
 

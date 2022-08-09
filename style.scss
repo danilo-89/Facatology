@@ -121,7 +121,8 @@ a.btn-retro,
 	}
 }
 
-*:focus-visible {
+*:focus-visible,
+a:focus-visible {
 	outline: #453bdb auto 1px;
 }
 
