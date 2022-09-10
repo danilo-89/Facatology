@@ -490,9 +490,10 @@ nav.before-animation {
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
-		width: 5.7rem;
-		height: 5rem;
-		top: -5rem;
+    width: 5.7rem;
+    height: 5rem;
+    top: 0.2px;
+    transform: translateY(-100%);
 	}
 
 	&::after {
@@ -503,10 +504,11 @@ nav.before-animation {
 		background-size: cover;
 		position: absolute;
 		height: 5rem;
-		top: -5rem;
 		right: 0;
 		width: calc(100% - 5.7rem);
 		background-position: 100%;
+    top: 0.2px;
+    transform: translate(0, -100%);
 	}
 
 	.red-fill-frame-content {
