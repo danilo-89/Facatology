@@ -543,7 +543,7 @@ nav.before-animation .logo-frame {
   position: absolute;
   width: 5.7rem;
   height: 5rem;
-  top: 0.2px;
+  top: 0.3px;
   transform: translateY(-100%);
 }
 .red-fill-frame::after {
@@ -557,7 +557,7 @@ nav.before-animation .logo-frame {
   right: 0;
   width: calc(100% - 5.7rem);
   background-position: 100%;
-  top: 0.2px;
+  top: 0.3px;
   transform: translate(0, -100%);
 }
 .red-fill-frame .red-fill-frame-content {
