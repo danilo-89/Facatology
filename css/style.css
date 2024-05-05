@@ -43,10 +43,10 @@ ul {
 
 body {
   background-color: #faf1de;
-  background-image: -webkit-gradient(linear, left top, right top, from(hsla(31deg, 42%, 59%, 0.12)), color-stop(11%, rgba(200, 160, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0)), color-stop(65%, rgba(200, 160, 0, 0.1))), url(/img/noise-texture.png);
-  background-image: linear-gradient(to right, hsla(31deg, 42%, 59%, 0.12), rgba(200, 160, 0, 0.1) 11%, rgba(0, 0, 0, 0) 35%, rgba(200, 160, 0, 0.1) 65%), url(/img/noise-texture.png);
-  -webkit-box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px hsla(33deg, 31%, 57%, 0.5), inset 0 0 30px hsla(29deg, 38%, 53%, 0.75);
-          box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px hsla(33deg, 31%, 57%, 0.5), inset 0 0 30px hsla(29deg, 38%, 53%, 0.75);
+  background-image: -webkit-gradient(linear, left top, right top, from(hsla(31, 42%, 59%, 0.12)), color-stop(11%, rgba(200, 160, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0)), color-stop(65%, rgba(200, 160, 0, 0.1))), url(/img/noise-texture.png);
+  background-image: linear-gradient(to right, hsla(31, 42%, 59%, 0.12), rgba(200, 160, 0, 0.1) 11%, rgba(0, 0, 0, 0) 35%, rgba(200, 160, 0, 0.1) 65%), url(/img/noise-texture.png);
+  -webkit-box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px hsla(33, 31%, 57%, 0.5), inset 0 0 30px hsla(29, 38%, 53%, 0.75);
+          box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px hsla(33, 31%, 57%, 0.5), inset 0 0 30px hsla(29, 38%, 53%, 0.75);
   font-family: "Itim", cursive;
   line-height: 2.4rem;
   color: #404041;
@@ -56,36 +56,31 @@ body {
 *::-webkit-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #a33948;
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 *::-moz-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #a33948;
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 *:-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #a33948;
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 *::-ms-input-placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #a33948;
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 *::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #a33948;
-  opacity: 1;
-  /* Firefox */
+  opacity: 1; /* Firefox */
 }
 
 *:-ms-input-placeholder {
@@ -136,8 +131,8 @@ a.btn-retro,
   border-color: #5d5d5f;
   border-style: solid;
   border-width: 0.2rem;
-  -webkit-box-shadow: 0.7rem 0.6rem 1.5rem 0 hsla(0deg, 0%, 0%, 0.121);
-          box-shadow: 0.7rem 0.6rem 1.5rem 0 hsla(0deg, 0%, 0%, 0.121);
+  -webkit-box-shadow: 0.7rem 0.6rem 1.5rem 0 hsla(0, 0%, 0%, 0.121);
+          box-shadow: 0.7rem 0.6rem 1.5rem 0 hsla(0, 0%, 0%, 0.121);
   border-radius: 25.5rem 1.5rem 22.5rem 1.5rem/1.5rem 22.5rem 1.5rem 25.5rem;
   border-bottom-width: 0.3rem;
   background: #f3e7d7 url(../img/dot-pattern.svg) repeat-x bottom center;
@@ -147,8 +142,8 @@ a.btn-retro,
 }
 a.btn-retro:hover,
 .btn-retro:hover {
-  -webkit-box-shadow: 0.2rem 0.8rem 0.4rem -0.6rem hsla(0deg, 0%, 0%, 0.3);
-          box-shadow: 0.2rem 0.8rem 0.4rem -0.6rem hsla(0deg, 0%, 0%, 0.3);
+  -webkit-box-shadow: 0.2rem 0.8rem 0.4rem -0.6rem hsla(0, 0%, 0%, 0.3);
+          box-shadow: 0.2rem 0.8rem 0.4rem -0.6rem hsla(0, 0%, 0%, 0.3);
 }
 
 *:focus-visible,
@@ -470,17 +465,17 @@ nav .nav-container .nav-p {
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: hsla(240deg, 1%, 25%, 0.4);
+    background-color: hsla(240, 1%, 25%, 0.4);
     z-index: 1;
     position: fixed;
   }
   nav.expanded .nav-container .nav-holder .nav-ul-wrapper {
     padding-top: 3rem;
     background-color: #faf1de;
-    background-image: -webkit-gradient(linear, left top, right top, from(hsla(31deg, 42%, 59%, 0.12)), color-stop(11%, rgba(200, 160, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0)), color-stop(65%, rgba(200, 160, 0, 0.1))), url(/img/noise-texture.png);
-    background-image: linear-gradient(to right, hsla(31deg, 42%, 59%, 0.12), rgba(200, 160, 0, 0.1) 11%, rgba(0, 0, 0, 0) 35%, rgba(200, 160, 0, 0.1) 65%), url(/img/noise-texture.png);
-    -webkit-box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px hsla(33deg, 31%, 57%, 0.5), inset 0 0 30px hsla(29deg, 38%, 53%, 0.75);
-            box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px hsla(33deg, 31%, 57%, 0.5), inset 0 0 30px hsla(29deg, 38%, 53%, 0.75);
+    background-image: -webkit-gradient(linear, left top, right top, from(hsla(31, 42%, 59%, 0.12)), color-stop(11%, rgba(200, 160, 0, 0.1)), color-stop(35%, rgba(0, 0, 0, 0)), color-stop(65%, rgba(200, 160, 0, 0.1))), url(/img/noise-texture.png);
+    background-image: linear-gradient(to right, hsla(31, 42%, 59%, 0.12), rgba(200, 160, 0, 0.1) 11%, rgba(0, 0, 0, 0) 35%, rgba(200, 160, 0, 0.1) 65%), url(/img/noise-texture.png);
+    -webkit-box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px hsla(33, 31%, 57%, 0.5), inset 0 0 30px hsla(29, 38%, 53%, 0.75);
+            box-shadow: inset 0 0 15px 20px rgba(212, 176, 131, 0.02), inset 0 0 20px hsla(33, 31%, 57%, 0.5), inset 0 0 30px hsla(29, 38%, 53%, 0.75);
     height: 100%;
     position: absolute;
     top: 0;
@@ -544,7 +539,8 @@ nav.before-animation .logo-frame {
   width: 5.7rem;
   height: 5rem;
   top: 0.5px;
-  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 .red-fill-frame::after {
   content: "";
@@ -558,7 +554,8 @@ nav.before-animation .logo-frame {
   width: calc(100% - 5.7rem);
   background-position: 100%;
   top: 0.5px;
-  transform: translate(0, -100%);
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
 }
 .red-fill-frame .red-fill-frame-content {
   position: relative;
@@ -666,6 +663,7 @@ nav.before-animation .logo-frame {
     margin-left: auto;
     max-width: 50%;
     margin-bottom: 1.5rem;
+    padding-right: 0;
   }
 }
 .frame-retro.frame-etymology figure img {
@@ -753,6 +751,36 @@ nav.before-animation .logo-frame {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
+}
+.frame-retro.frame-calculator .input-calc::-webkit-input-placeholder {
+  color: #c15155;
+  opacity: 1; /* Firefox */
+  font-size: 1.7rem;
+}
+.frame-retro.frame-calculator .input-calc::-moz-placeholder {
+  color: #c15155;
+  opacity: 1; /* Firefox */
+  font-size: 1.7rem;
+}
+.frame-retro.frame-calculator .input-calc:-ms-input-placeholder {
+  color: #c15155;
+  opacity: 1; /* Firefox */
+  font-size: 1.7rem;
+}
+.frame-retro.frame-calculator .input-calc::-ms-input-placeholder {
+  color: #c15155;
+  opacity: 1; /* Firefox */
+  font-size: 1.7rem;
+}
+.frame-retro.frame-calculator .input-calc::placeholder {
+  color: #c15155;
+  opacity: 1; /* Firefox */
+  font-size: 1.7rem;
+}
+.frame-retro.frame-calculator .input-calc::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: #c15155;
+  font-size: 1.7rem;
 }
 .frame-retro.frame-calculator .error {
   color: #9a3337;

@@ -10,6 +10,7 @@
 $red-1: #a33948;
 $red-2: #9a3337;
 $red-3: #d45559;
+$red-light: #c15155;
 $gray-dark: #404041;
 $gray: #666666;
 $yellow-light: #f4e7d7;
@@ -493,10 +494,10 @@ nav.before-animation {
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: absolute;
-    width: 5.7rem;
-    height: 5rem;
-    top: 0.5px;
-    transform: translateY(-100%);
+		width: 5.7rem;
+		height: 5rem;
+		top: 0.5px;
+		transform: translateY(-100%);
 	}
 
 	&::after {
@@ -510,8 +511,8 @@ nav.before-animation {
 		right: 0;
 		width: calc(100% - 5.7rem);
 		background-position: 100%;
-    top: 0.5px;
-    transform: translate(0, -100%);
+		top: 0.5px;
+		transform: translate(0, -100%);
 	}
 
 	.red-fill-frame-content {
@@ -618,6 +619,7 @@ nav.before-animation {
 				margin-left: auto;
 				max-width: 50%;
 				margin-bottom: 1.5rem;
+				padding-right: 0;
 			}
 
 			img {
@@ -700,6 +702,18 @@ nav.before-animation {
 			top: 0;
 			left: 50%;
 			transform: translate(-50%, 0);
+
+			&::placeholder {
+				color: $red-light;
+				opacity: 1; /* Firefox */
+				font-size: 1.7rem;
+			}
+
+			&::-ms-input-placeholder {
+				/* Edge 12 -18 */
+				color: $red-light;
+				font-size: 1.7rem;
+			}
 		}
 
 		.error {
